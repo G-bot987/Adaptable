@@ -8,3 +8,5 @@ https://adaptable-seven.vercel.app/
 - install node
 - npm i
 - npm run dev in /adaptable will start the project locally
+
+test commit 
