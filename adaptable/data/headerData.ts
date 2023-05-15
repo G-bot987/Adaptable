@@ -13,6 +13,16 @@ export const headerData = {
     image: account,
     alt: "account icon",
     text: "New booking"
+  },
+
+  breadCrumbs: ['Patients', 'James Smith', "Autism (ASD) Assessment"],
+
+  title: {
+    text: "Autism (ASD) Assessment"
+  },
+
+  assessmentBtn: {
+    text: "Open"
   }
 
 };
