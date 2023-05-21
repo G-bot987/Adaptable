@@ -66,6 +66,16 @@
             color: #280B3D;
         }
 
-        &__assessmentBtn {}
+        &__assessmentBtn {
+            font-family: Albert Sans;
+            font-size: 12px;
+            line-height: 20px;
+            color: #280B3D;
+            padding: 5px 12px;
+            width: 3.4375rem;
+            height: 1.875rem;
+            background: #F7F5F1;
+            border-radius: 100px;
+        }
     }
 }
