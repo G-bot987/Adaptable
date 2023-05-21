@@ -17,9 +17,7 @@ export const headerData = {
 
   breadCrumbs: ['Patients', 'James Smith', "Autism (ASD) Assessment"],
 
-  title: {
-    text: "Autism (ASD) Assessment"
-  },
+  title: "Autism (ASD) Assessment",
 
   assessmentBtn: {
     text: "Open"
