@@ -1,10 +1,8 @@
 import React from 'react'
-
 import './Navbar.scss';
 
 
 export default function Navbar(props: string[]) {
-  console.log(props)
   return (
     <ul className='navbar'>
       {Object.keys(props).map((option: any, index: number) => (

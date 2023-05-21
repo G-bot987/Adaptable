@@ -6,7 +6,6 @@ import './NewBooking.scss'
 import { newBookingInterface } from '../../../../../interfaces/headerInterfaces/header.interfaces'
 
 export default function NewBooking(props: newBookingInterface) {
-    console.log(props)
     const { image, alt, text } = props
 
     return (
