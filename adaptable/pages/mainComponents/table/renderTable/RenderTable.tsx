@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { Table } from '@nextui-org/react';
 
-export default function RenderTable() {
+import { TableOptionsInterface } from '../../../../interfaces/tableInterfaces/table.interfaces'
+
+export default function RenderTable(Props: TableOptionsInterface) {
+
     return (
         <div>RenderTable</div>
     )
