@@ -1,53 +1,50 @@
-import React, { useState } from 'react'
-import { Table } from '@nextui-org/react';
+import React, { useEffect, useState } from 'react'
 import styles from './SelectTable.module.scss';
 import RenderTable from './renderTable/RenderTable';
+import { TableOptionsInterface } from '../../../interfaces/tableInterfaces/table.interfaces';
 
 interface TableDataInterface {
   tableOptions: TableOptionsInterface[]
 }
 
-interface TableOptionsInterface {
-  header: string
-  tableContent?: contentInterface
 
-}
-
-interface contentInterface {
-  columns: string[]
-  appointmentType: appointmentRowInterface[]
-
-}
-
-interface appointmentRowInterface {
-  appointment: string
-  booked: boolean
-  DateTime: string
-  location: string
-  Clinician: string
-}
 
 
 export default function SelectTable(Props: TableDataInterface) {
   const { tableOptions } = Props
 
-  console.log(tableOptions)
 
-  const [show, setShow] = useState(false);
+  const [showTable, setShowTable] = useState({});
+
+
+  const checkShowTable = (
+    object: object
+  ): object is TableOptionsInterface => {
+    return (
+      object !== null &&
+      typeof object === 'object' &&
+      'header' in object &&
+      'tableContent' in object
+    );
+  };
+
+
+  useEffect(() => { }, [showTable])
 
   return (
     <section className={styles.table}>
-      <ul>
-
+      <ul className={styles.table__navTabs}>
         {tableOptions?.map((table: TableOptionsInterface, index: number) => (
-          <li key={index}>
-            <button>
+          <li key={index} className={styles.table__navTabs__item}>
+            <button onClick={() => setShowTable(table)}>
               {table.header}
             </button>
           </li>
         ))}
       </ul>
-      <RenderTable />
+      {checkShowTable(showTable) &&
+        <RenderTable {...showTable} />
+      }
     </section>
   )
 }
