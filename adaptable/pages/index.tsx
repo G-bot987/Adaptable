@@ -4,12 +4,12 @@ import SelectTable from './mainComponents/table/SelectTable'
 import { tableData } from '../data/tableData'
 import { headerData } from '../data/headerData'
 
-export default function test() {
+
+export default function App() {
     return (
-        <div>
+        <>
             <Header {...{ headerData }} />
             <SelectTable {...tableData} />
-
-        </div>
+        </>
     )
 }
