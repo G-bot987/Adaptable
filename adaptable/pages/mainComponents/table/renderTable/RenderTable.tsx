@@ -14,8 +14,6 @@ export default function RenderTable(Props: TableOptionsInterface) {
     const { appointmentType, columns } = tableContent
 
     return (
-
-
         <table className={styles.table}>
             <thead className={styles.table__colWrapper}>
                 <tr>
@@ -38,20 +36,15 @@ export default function RenderTable(Props: TableOptionsInterface) {
                             </tr>
                         ) : (
                             <tr className={`${styles.table__row} ${row.booked ? styles['table__row__cell--booked'] : ''}`}>
-
                                 <td className={`${styles.table__row__cell} ${row.booked ? styles['table__row__cell--booked'] : ''}`}>{row.appointment}</td>
                                 <td className={` ${!row.booked ? styles['table__row--bookNow'] : ''}`}>{row.DateTime}</td>
                                 <td className={`${styles.table__row__cell} ${row.booked ? styles['table__row__cell--booked'] : ''}`}>{row.location}</td>
                                 <td className={`${styles.table__row__cell} ${row.booked ? styles['table__row__cell--booked'] : ''}`}>{row.Clinician}</td>
-
                             </tr>
                         )}
                     </React.Fragment>
                 ))}
             </tbody>
         </table>
-
-
     );
-
 }
