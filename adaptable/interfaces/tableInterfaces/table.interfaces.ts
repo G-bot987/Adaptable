@@ -4,11 +4,18 @@ export interface TableOptionsInterface {
 }
 
 export interface contentInterface {
-    columns: string[]
+    columns: columnsInterface[]
     appointmentType: appointmentRowInterface[]
 }
 
+export interface columnsInterface {
+    value: string
+    key: string
+}
+
 export interface appointmentRowInterface {
+    key: string
+    [key: string]: any;
     appointment: string
     booked: boolean
     DateTime: string
