@@ -32,10 +32,10 @@ export default function SelectTable(Props: TableDataInterface) {
   useEffect(() => { }, [showTable])
 
   return (
-    <section className={styles.table}>
-      <ul className={styles.table__navTabs}>
+    <section className={styles.tableSection}>
+      <ul className={styles.tableSection__navTabs}>
         {tableOptions?.map((table: TableOptionsInterface, index: number) => (
-          <li key={index} className={styles.table__navTabs__item}>
+          <li key={index} className={styles.tableSection__navTabs__item}>
             <button onClick={() => setShowTable(table)}>
               {table.header}
             </button>

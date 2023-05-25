@@ -1,6 +1,10 @@
-.table {
+.tableSection {
     width: 100%;
     height: 100%;
+    background-color: #F9F8F6;
+    padding-bottom: 6.25rem;
+    display: flex;
+    flex-direction: column;
 
     &__navTabs {
         display: flex;
@@ -8,6 +12,7 @@
         padding-left: 4.375rem;
         height: 3.375rem;
         width: 100%;
+        background-color: #FFFFFF;
 
         &__item {
             padding-right: 2.5rem;
