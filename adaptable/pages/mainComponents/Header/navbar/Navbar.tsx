@@ -18,7 +18,7 @@ export default function Navbar(props: navbarDataInterface) {
     <ul className={styles.navbar}>
       {navbar?.map((option: any, index: number) => (
         <li className={`${styles.navbar__btnWrapper} ${navSelected === option ? styles['navbar__btnWrapper--selected'] : ''}`} key={index}>
-          <button onClick={() => { SetNavSelected(`${option}`) }} className={`${styles.navbar__btnWrapper__btn} ${navSelected !== option ? styles['navbar__btnWrapper__btn--notSelected'] : ''}`}>
+          <button onClick={() => { SetNavSelected(`${option}`) }} className={`${styles.navbar__btnWrapper__btn} ${navSelected !== option ? styles['navbar__btnWrapper__btn--notSelected'] : styles['navbar__btnWrapper__btn--selected']}`}>
             {option}
           </button>
         </li>

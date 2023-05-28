@@ -22,6 +22,11 @@
         &__btn--notSelected:hover {
             color: #7B3CEA;
         }
+
+        &__btn--selected {
+            position: relative;
+            top: -4px;
+        }
     }
 
     &__btnWrapper--selected {
