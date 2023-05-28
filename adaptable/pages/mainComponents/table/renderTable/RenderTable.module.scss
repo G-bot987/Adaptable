@@ -18,6 +18,9 @@
             line-height: 1.125rem;
             color: #6E637E;
             text-align: left;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 1rem;
         }
     }
 
@@ -32,6 +35,21 @@
 
         &__cell {
             opacity: 0.3;
+            padding-top: 1.125rem;
+            padding-bottom: 1.125rem;
+            padding-left: 1rem;
+
+        }
+
+        &__cell-time {
+            padding-left: 1rem;
+            padding-top: 1.125rem;
+            padding-bottom: 1.125rem;
+        }
+
+        &__cell-booked {
+            color: #1A1A1A;
+            opacity: 1;
         }
     }
 
@@ -45,21 +63,31 @@
 
         &__cell {
             opacity: 0.3;
+            padding-top: 1.125rem;
+            padding-bottom: 1.125rem;
+            padding-left: 1rem;
         }
     }
 
-    &__row__cell--booked {
-        color: #1A1A1A;
+
+    &__row-bookNow {
+        font-family: 'Cy';
+        color: #7B3CEA;
+        font-weight: 600;
+        text-decoration: underline;
         opacity: 1;
+        padding-top: 1.125rem;
+        padding-bottom: 1.125rem;
+        padding-left: 1rem;
     }
 
-    &__row--bookNow {
+    &__rowBtm-bookNow {
         font-family: 'Cy';
         color: #7B3CEA;
-    }
-
-    &__rowBtm--bookNow {
-        font-family: 'Cy';
-        color: #7B3CEA;
+        font-weight: 600;
+        text-decoration: underline;
+        padding-top: 1.125rem;
+        padding-bottom: 1.125rem;
+        padding-left: 1rem;
     }
 }
