@@ -38,7 +38,7 @@ export default function RenderTable(Props: TableOptionsInterface) {
                             ) : (
                                 <tr className={`${styles.backDrop__table__row} ${row.booked ? styles['backDrop__table__row__cell--booked'] : ''}`}>
                                     <td className={`${styles.backDrop__table__row__cell} ${row.booked ? styles['backDrop__table__row__cell--booked'] : ''}`}>{row.appointment}</td>
-                                    <td className={` ${!row.booked ? styles['backDrop__table__row--bookNow'] : ''}`}>{row.DateTime}</td>
+                                    <td className={` ${!row.booked ? styles['backDrop__table__row--bookNow'] : styles['backDrop__table__row--booked']}`}>{row.DateTime}</td>
                                     <td className={`${styles.backDrop__table__row__cell} ${row.booked ? styles['backDrop__table__row__cell--booked'] : ''}`}>{row.location}</td>
                                     <td className={`${styles.backDrop__table__row__cell} ${row.booked ? styles['backDrop__table__row__cell--booked'] : ''}`}>{row.Clinician}</td>
                                 </tr>
