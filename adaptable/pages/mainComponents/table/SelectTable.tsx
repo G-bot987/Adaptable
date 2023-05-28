@@ -34,7 +34,7 @@ export default function SelectTable(Props: TableDataInterface) {
       <ul className={styles.tableSection__navTabs}>
         {tableOptions?.map((table: TableOptionsInterface, index: number) => (
           <li key={index} className={styles.tableSection__navTabs__item}>
-            <button onClick={() => { setShowTable(table), setNavSelected(`${table.header}`) }} className={`${navSelected === table.header ? styles['tableSection__navTabs__item__btn'] : styles['tableSection__navTabs__item__btn--hover']}`}>
+            <button onClick={() => { setShowTable(table), setNavSelected(`${table.header}`) }} className={`${styles.tableSection__navTabs__item__btn}  ${navSelected === table.header ? styles['tableSection__navTabs__item__btn--selected'] : styles['tableSection__navTabs__item__btn--hover']}`}>
               {table.header}
             </button>
           </li>
