@@ -3,12 +3,12 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    margin-top: 2.5rem;
 
     &__navTabs {
         display: flex;
         flex-direction: row;
         padding-left: 4.375rem;
-        height: 3.375rem;
         width: 100%;
         background-color: #FFFFFF;
 
@@ -23,12 +23,15 @@
             flex-direction: column;
             justify-content: center;
 
-            &__btn {
+            &__btn--selected {
                 border-bottom: 3px solid;
                 border-color: #7B3CEA;
+            }
+
+            &__btn {
                 position: relative;
-                bottom: -1.5px;
                 min-height: 100%;
+                display: flex;
             }
 
             &__btn--hover:hover {

@@ -12,7 +12,6 @@
         margin-top: 3.75rem;
         margin-left: 2.5rem;
         margin-right: 2.5rem;
-        min-width: 75rem;
         border-radius: 5px;
         border-collapse: collapse;
         overflow: scroll;
@@ -27,6 +26,8 @@
                 line-height: 1.125rem;
                 color: #6E637E;
                 text-align: left;
+                padding: 1rem;
+                width: 16.75rem;
             }
         }
 
@@ -41,6 +42,15 @@
 
             &__cell {
                 opacity: 0.3;
+                padding-left: 1rem;
+            }
+
+            &__cell--booked {
+                color: #1A1A1A;
+                opacity: 1;
+                padding-left: 1rem;
+                padding-top: 1.125rem;
+                padding-bottom: 1.125rem;
             }
         }
 
@@ -54,22 +64,33 @@
 
             &__cell {
                 opacity: 0.3;
+                padding-left: 1rem;
+                padding-top: 1.125rem;
+                padding-bottom: 1.125rem;
             }
         }
 
-        &__row__cell--booked {
-            color: #1A1A1A;
-            opacity: 1;
-        }
 
         &__row--bookNow {
             font-family: 'Cy';
             color: #7B3CEA;
+            padding-left: 1rem;
+            padding-top: 1.125rem;
+            padding-bottom: 1.125rem;
+        }
+
+        &__row--booked {
+            padding-left: 1rem;
+            padding-top: 1.125rem;
+            padding-bottom: 1.125rem;
         }
 
         &__rowBtm--bookNow {
             font-family: 'Cy';
             color: #7B3CEA;
+            padding-left: 1rem;
+            padding-top: 1.125rem;
+            padding-bottom: 1.125rem;
         }
     }
 }
