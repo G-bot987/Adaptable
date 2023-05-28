@@ -1,65 +1,75 @@
-.table {
-    background-color: #FFFFFF;
-    outline: 1px solid #DDD8DE;
-    margin-top: 3.75rem;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-    min-width: 75rem;
-    border-radius: 5px;
-    border-collapse: collapse;
+.backDrop {
+    background-color: #F9F8F6;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 6.25rem;
+    display: flex;
+    flex-direction: column;
 
-    &__colWrapper {
-        border-bottom: 1px solid #DDD8DE;
+    &__table {
+        background-color: #FFFFFF;
+        outline: 1px solid #DDD8DE;
+        margin-top: 3.75rem;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+        min-width: 75rem;
+        border-radius: 5px;
+        border-collapse: collapse;
+        overflow: scroll;
 
-        &__colHeader {
+        &__colWrapper {
+            border-bottom: 1px solid #DDD8DE;
+
+            &__colHeader {
+                font-family: 'Albert Sans';
+                font-weight: 400;
+                font-size: 0.875rem;
+                line-height: 1.125rem;
+                color: #6E637E;
+                text-align: left;
+            }
+        }
+
+        &__row {
+            border-bottom: 1px solid #DDD8DE;
             font-family: 'Albert Sans';
+            font-style: normal;
             font-weight: 400;
             font-size: 0.875rem;
-            line-height: 1.125rem;
-            color: #6E637E;
-            text-align: left;
+            line-height: 1.375rem;
+            color: #000000;
+
+            &__cell {
+                opacity: 0.3;
+            }
         }
-    }
 
-    &__row {
-        border-bottom: 1px solid #DDD8DE;
-        font-family: 'Albert Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 0.875rem;
-        line-height: 1.375rem;
-        color: #000000;
+        &__rowBtm {
+            font-family: 'Albert Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+            color: #000000;
 
-        &__cell {
-            opacity: 0.3;
+            &__cell {
+                opacity: 0.3;
+            }
         }
-    }
 
-    &__rowBtm {
-        font-family: 'Albert Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 0.875rem;
-        line-height: 1.375rem;
-        color: #000000;
-
-        &__cell {
-            opacity: 0.3;
+        &__row__cell--booked {
+            color: #1A1A1A;
+            opacity: 1;
         }
-    }
 
-    &__row__cell--booked {
-        color: #1A1A1A;
-        opacity: 1;
-    }
+        &__row--bookNow {
+            font-family: 'Cy';
+            color: #7B3CEA;
+        }
 
-    &__row--bookNow {
-        font-family: 'Cy';
-        color: #7B3CEA;
-    }
-
-    &__rowBtm--bookNow {
-        font-family: 'Cy';
-        color: #7B3CEA;
+        &__rowBtm--bookNow {
+            font-family: 'Cy';
+            color: #7B3CEA;
+        }
     }
 }
