@@ -18,6 +18,15 @@
             font-size: 0.87rem;
             line-height: 0.87rem;
         }
+
+        &__btn--notSelected:hover {
+            color: #7B3CEA;
+        }
+    }
+
+    &__btnWrapper--selected {
+        border-top: 8px solid;
+        border-color: #7B3CEA;
     }
 
 }
