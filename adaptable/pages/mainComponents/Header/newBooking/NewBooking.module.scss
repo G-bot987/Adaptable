@@ -10,6 +10,13 @@
         padding: 0.75rem;
         color: #280B3D;
         font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 0.875rem;
+    }
+
+    &__button:hover {
+        color: #ffffff;
+        background-color: #280B3D;
     }
 
     &__imgContainer {
