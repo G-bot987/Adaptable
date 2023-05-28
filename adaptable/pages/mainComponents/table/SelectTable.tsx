@@ -7,14 +7,12 @@ interface TableDataInterface {
   tableOptions: TableOptionsInterface[]
 }
 
-
-
-
 export default function SelectTable(Props: TableDataInterface) {
   const { tableOptions } = Props
 
 
   const [showTable, setShowTable] = useState({});
+  const [navSelected, setNavSelected] = useState('Appointments')
 
 
   const checkShowTable = (
@@ -36,7 +34,7 @@ export default function SelectTable(Props: TableDataInterface) {
       <ul className={styles.tableSection__navTabs}>
         {tableOptions?.map((table: TableOptionsInterface, index: number) => (
           <li key={index} className={styles.tableSection__navTabs__item}>
-            <button onClick={() => setShowTable(table)}>
+            <button onClick={() => { setShowTable(table), setNavSelected(`${table.header}`) }} className={`${navSelected === table.header ? styles['tableSection__navTabs__item__btn'] : styles['tableSection__navTabs__item__btn--hover']}`}>
               {table.header}
             </button>
           </li>
