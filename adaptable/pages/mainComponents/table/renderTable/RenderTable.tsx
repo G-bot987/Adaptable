@@ -14,37 +14,39 @@ export default function RenderTable(Props: TableOptionsInterface) {
     const { appointmentType, columns } = tableContent
 
     return (
-        <table className={styles.table}>
-            <thead className={styles.table__colWrapper}>
-                <tr>
-                    {columns.map((column) => (
-                        <th className={styles.table__colWrapper__colHeader} key={column.key}>
-                            {column.value}
-                        </th>
+        <div className={styles.backDrop}>
+            <table className={styles.backDrop__table}>
+                <thead className={styles.backDrop__table__colWrapper}>
+                    <tr>
+                        {columns.map((column) => (
+                            <th className={styles.backDrop__table__colWrapper__colHeader} key={column.key}>
+                                {column.value}
+                            </th>
+                        ))}
+                    </tr>
+                </thead>
+                <tbody>
+                    {appointmentType.map((row: appointmentRowInterface, index) => (
+                        <React.Fragment key={index}>
+                            {index + 1 === appointmentType.length ? (
+                                <tr className={styles.backDrop__table__rowBtm}>
+                                    <td className={`${styles.backDrop__table__rowBtm__cell} ${row.booked ? styles['backDrop__table__row__cell--booked'] : ''}`}>{row.appointment}</td>
+                                    <td className={` ${!row.booked ? styles['backDrop__table__rowBtm--bookNow'] : ''}`}>{row.DateTime}</td>
+                                    <td className={`${styles.backDrop__table__rowBtm__cell} ${row.booked ? styles['backDrop__table__rowBtm__cell--booked'] : ''}`}>{row.location}</td>
+                                    <td className={`${styles.backDrop__table__rowBtm__cell} ${row.booked ? styles['backDrop__table__rowBtm__cell--booked'] : ''}`}>{row.Clinician}</td>
+                                </tr>
+                            ) : (
+                                <tr className={`${styles.backDrop__table__row} ${row.booked ? styles['backDrop__table__row__cell--booked'] : ''}`}>
+                                    <td className={`${styles.backDrop__table__row__cell} ${row.booked ? styles['backDrop__table__row__cell--booked'] : ''}`}>{row.appointment}</td>
+                                    <td className={` ${!row.booked ? styles['backDrop__table__row--bookNow'] : ''}`}>{row.DateTime}</td>
+                                    <td className={`${styles.backDrop__table__row__cell} ${row.booked ? styles['backDrop__table__row__cell--booked'] : ''}`}>{row.location}</td>
+                                    <td className={`${styles.backDrop__table__row__cell} ${row.booked ? styles['backDrop__table__row__cell--booked'] : ''}`}>{row.Clinician}</td>
+                                </tr>
+                            )}
+                        </React.Fragment>
                     ))}
-                </tr>
-            </thead>
-            <tbody>
-                {appointmentType.map((row: appointmentRowInterface, index) => (
-                    <React.Fragment key={index}>
-                        {index + 1 === appointmentType.length ? (
-                            <tr className={styles.table__rowBtm}>
-                                <td className={`${styles.table__rowBtm__cell} ${row.booked ? styles['table__row__cell--booked'] : ''}`}>{row.appointment}</td>
-                                <td className={` ${!row.booked ? styles['table__rowBtm--bookNow'] : ''}`}>{row.DateTime}</td>
-                                <td className={`${styles.table__rowBtm__cell} ${row.booked ? styles['table__rowBtm__cell--booked'] : ''}`}>{row.location}</td>
-                                <td className={`${styles.table__rowBtm__cell} ${row.booked ? styles['table__rowBtm__cell--booked'] : ''}`}>{row.Clinician}</td>
-                            </tr>
-                        ) : (
-                            <tr className={`${styles.table__row} ${row.booked ? styles['table__row__cell--booked'] : ''}`}>
-                                <td className={`${styles.table__row__cell} ${row.booked ? styles['table__row__cell--booked'] : ''}`}>{row.appointment}</td>
-                                <td className={` ${!row.booked ? styles['table__row--bookNow'] : ''}`}>{row.DateTime}</td>
-                                <td className={`${styles.table__row__cell} ${row.booked ? styles['table__row__cell--booked'] : ''}`}>{row.location}</td>
-                                <td className={`${styles.table__row__cell} ${row.booked ? styles['table__row__cell--booked'] : ''}`}>{row.Clinician}</td>
-                            </tr>
-                        )}
-                    </React.Fragment>
-                ))}
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
     );
 }
