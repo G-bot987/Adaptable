@@ -28,18 +28,18 @@ export default function RenderTable(Props: TableOptionsInterface) {
                 {appointmentType.map((row: appointmentRowInterface, index) => (
                     <React.Fragment key={index}>
                         {index + 1 === appointmentType.length ? (
-                            <tr className={styles.table__rowBtm}>
-                                <td className={`${styles.table__rowBtm__cell} ${row.booked ? styles['table__row__cell--booked'] : ''}`}>{row.appointment}</td>
-                                <td className={` ${!row.booked ? styles['table__rowBtm--bookNow'] : ''}`}>{row.DateTime}</td>
-                                <td className={`${styles.table__rowBtm__cell} ${row.booked ? styles['table__rowBtm__cell--booked'] : ''}`}>{row.location}</td>
-                                <td className={`${styles.table__rowBtm__cell} ${row.booked ? styles['table__rowBtm__cell--booked'] : ''}`}>{row.Clinician}</td>
+                            <tr className={`${styles.table__rowBtm} ${row.booked ? styles['table__row__cell-booked'] : ''}`}>
+                                <td className={`${styles.table__rowBtm__cell} ${row.booked ? styles['table__row__cell-booked'] : ''}`}>{row.appointment}</td>
+                                <td className={` ${!row.booked ? styles['table__rowBtm-bookNow'] : styles['table__row__cell-time']}`}>{row.DateTime}</td>
+                                <td className={`${styles.table__rowBtm__cell} ${row.booked ? styles['table__rowBtm__cell-booked'] : ''}`}>{row.location}</td>
+                                <td className={`${styles.table__rowBtm__cell} ${row.booked ? styles['table__rowBtm__cell-booked'] : ''}`}>{row.Clinician}</td>
                             </tr>
                         ) : (
-                            <tr className={`${styles.table__row} ${row.booked ? styles['table__row__cell--booked'] : ''}`}>
-                                <td className={`${styles.table__row__cell} ${row.booked ? styles['table__row__cell--booked'] : ''}`}>{row.appointment}</td>
-                                <td className={` ${!row.booked ? styles['table__row--bookNow'] : ''}`}>{row.DateTime}</td>
-                                <td className={`${styles.table__row__cell} ${row.booked ? styles['table__row__cell--booked'] : ''}`}>{row.location}</td>
-                                <td className={`${styles.table__row__cell} ${row.booked ? styles['table__row__cell--booked'] : ''}`}>{row.Clinician}</td>
+                            <tr className={`${styles.table__row} ${row.booked ? styles['table__row__cell-booked'] : ''}`}>
+                                <td className={`${styles.table__row__cell} ${row.booked ? styles['table__row__cell-booked'] : ''}`}>{row.appointment}</td>
+                                <td className={` ${!row.booked ? styles['table__row-bookNow'] : styles['table__row__cell-time']}`}>{row.DateTime}</td>
+                                <td className={`${styles.table__row__cell} ${row.booked ? styles['table__row__cell-booked'] : ''}`}>{row.location}</td>
+                                <td className={`${styles.table__row__cell} ${row.booked ? styles['table__row__cell-booked'] : ''}`}>{row.Clinician}</td>
                             </tr>
                         )}
                     </React.Fragment>
