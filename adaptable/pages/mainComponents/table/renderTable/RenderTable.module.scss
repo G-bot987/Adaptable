@@ -74,9 +74,13 @@
         &__row--bookNow {
             font-family: 'Cy';
             color: #7B3CEA;
+            font-weight: 600;
+            font-size: 0.875rem;
+            line-height: 0.875rem;
             padding-left: 1rem;
             padding-top: 1.125rem;
             padding-bottom: 1.125rem;
+            text-decoration: underline;
         }
 
         &__row--booked {
@@ -88,9 +92,13 @@
         &__rowBtm--bookNow {
             font-family: 'Cy';
             color: #7B3CEA;
+            font-weight: 600;
+            font-size: 0.875rem;
+            line-height: 0.875rem;
             padding-left: 1rem;
             padding-top: 1.125rem;
             padding-bottom: 1.125rem;
+            text-decoration: underline;
         }
     }
 }
