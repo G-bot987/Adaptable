@@ -4,6 +4,10 @@
     display: flex;
     flex-direction: column;
 
+    @media(min-width:768px) {
+        padding-right: 1.875rem;
+    }
+
     &__upper {
         background-color: #FFFFFF;
         width: 100%;
@@ -25,13 +29,21 @@
     &__lower {
         background-color: #FFFFFF;
         height: 100%;
-        padding-left: 3.75rem;
+        padding-left: 1.875rem;
+
+        @media(min-width:424px) {
+            padding-left: 3.75rem;
+        }
 
         &__breadCrumbs {
             display: flex;
             flex-direction: row;
             font-family: 'Albert Sans';
-            padding-top: 3.046875rem;
+            padding-top: 1rem;
+
+            @media(min-width:484px) {
+                padding-top: 3.046875rem;
+            }
 
             &__container {
                 display: flex;
@@ -85,11 +97,5 @@
             border-radius: 100px;
             margin-top: 0.625rem;
         }
-    }
-}
-
-@media(min-width:768px) {
-    .header {
-        padding-right: 1.875rem;
     }
 }
