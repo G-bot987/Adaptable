@@ -10,10 +10,8 @@ interface TableDataInterface {
 export default function SelectTable(Props: TableDataInterface) {
   const { tableOptions } = Props
 
-
   const [showTable, setShowTable] = useState({});
-  const [navSelected, setNavSelected] = useState('Appointments')
-
+  const [navSelected, setNavSelected] = useState('')
 
   const checkShowTable = (
     object: object
@@ -26,8 +24,13 @@ export default function SelectTable(Props: TableDataInterface) {
     );
   };
 
-
-  useEffect(() => { }, [showTable])
+  useEffect(() => {
+    const appointmentsData = tableOptions[0]
+    if (appointmentsData) {
+      setShowTable(appointmentsData)
+      setNavSelected(appointmentsData.header)
+    }
+  }, [])
 
   return (
     <section className={styles.tableSection}>
