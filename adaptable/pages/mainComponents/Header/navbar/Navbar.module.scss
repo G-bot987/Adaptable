@@ -1,37 +1,178 @@
-.navbar {
-    height: 100%;
-    align-items: center;
-    display: flex;
+ .navbar {
+     display: flex;
+     flex-grow: 1;
+     align-items: center;
+     flex-direction: column;
+     justify-content: space-between;
+     background-color: #280B3D;
+
+     @media (max-width: 767px) {
+         padding-top: 580px;
+         padding-bottom: 50px;
+         position: relative;
+         top: 0;
+         right: 0;
+         height: 600px;
+         z-index: 1;
+         border-bottom-left-radius: 5px;
+         border-bottom-right-radius: 5px;
+     }
+
+     &__openBtnContainer {
+         &__btn {
+             background-color: #FFFFFF;
+             width: 4rem;
+             height: 4rem;
+             border-radius: 5px;
+             padding-left: 1rem;
+
+             &__bar {
+                 background-color: #280B3D;
+                 width: 30px;
+                 height: 4px;
+                 margin-top: 5px;
+                 margin-bottom: 5px;
+                 border-radius: 5px;
+             }
+
+             &__bar--openTop {
+                 transition: transform 0.3s ease;
+                 transform: rotate(45deg) translate(-3px, 1px);
+                 margin: 0;
+             }
+
+             &__bar--openMiddle {
+                 display: none;
+             }
+
+             &__bar--openBtm {
+                 transition: transform 0.3s ease;
+                 transform: rotate(-45deg) translate(4px, -6px);
+                 margin: 0;
+             }
+         }
+     }
+
+     @media(min-width: 768px) {
+         &__openBtnContainer {
+             display: none;
+         }
+     }
+
+     &__btnWrapper {
+         padding: 0.25rem 0;
+         text-align: center;
+
+         &__btn {
+             width: 100%;
+             height: 100%;
+             color: #FFFFFF;
+             font-family: 'Albert Sans';
+             font-weight: 500;
+             font-size: 0.87rem;
+             line-height: 0.87rem;
+         }
+
+         &__btn--notSelected:hover {
+             color: #7B3CEA;
+         }
+
+         &__btn--selected {
+             position: relative;
+             top: -4px;
+         }
+     }
+
+     &__btnWrapper--selected {
+         border-bottom: 2px solid;
+         border-color: #7B3CEA;
+     }
+
+     &__button {
+         border: solid 1px #FFFFFF;
+         border-radius: 0 0 10px 0;
+         font-family: 'Cy', sans-serif;
+         padding: 0.75rem;
+         color: #FFFFFF;
+         font-weight: 600;
+         font-size: 0.875rem;
+         line-height: 0.875rem;
+     }
+
+     &__button:hover {
+         color: #FFFFFF;
+         background-color: #7B3CEA;
+     }
+
+     &__imgContainer {
+         background-color: #FFFFFF;
+
+         @media (max-width: 767px) {
+             border-radius: 2px;
+             width: 2rem;
+             height: 2rem;
+             display: flex;
+             justify-content: center;
+         }
+     }
+ }
+
+ .navbar--closed {
+     display: flex;
+     height: fit-content;
+ }
 
 
-    &__btnWrapper {
-        width: 100%;
-        height: 100%;
-        padding: 0 1.2rem;
+ @media(min-width:768px) {
+     .navbar {
+         flex-direction: row;
+         background-color: #FFFFFF;
+         padding-left: 13.58125rem;
+         display: flex;
+         height: 100%;
 
-        &__btn {
-            width: 100%;
-            height: 100%;
-            color: #280B3D;
-            font-family: 'Albert Sans';
-            font-weight: 500;
-            font-size: 0.87rem;
-            line-height: 0.87rem;
-        }
+         &__btnWrapper {
+             max-width: 4.75rem;
+             width: 100%;
+             height: 100%;
+             padding: 0 1.2rem;
 
-        &__btn--notSelected:hover {
-            color: #7B3CEA;
-        }
+             &__btn {
+                 color: #280B3D;
+             }
 
-        &__btn--selected {
-            position: relative;
-            top: -4px;
-        }
-    }
+             &__btn--notSelected:hover {
+                 color: #7B3CEA;
+             }
 
-    &__btnWrapper--selected {
-        border-top: 8px solid;
-        border-color: #7B3CEA;
-    }
+             &__btn--selected {
+                 position: relative;
+                 top: -4px;
+             }
+         }
 
-}
+         &__btnWrapper--selected {
+             border-top: 8px solid;
+             border-bottom: none;
+             border-color: #7B3CEA;
+         }
+
+         &__button {
+             border: solid 1px #280B3D;
+             color: #280B3D;
+         }
+
+         &__button:hover {
+             color: #ffffff;
+             background-color: #280B3D;
+         }
+
+         &__imgContainer {
+             padding-left: 10.59375rem;
+             padding-right: 1.875rem;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+         }
+     }
+ }

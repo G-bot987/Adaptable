@@ -11,6 +11,7 @@ class MyDocument extends Document {
             <Html lang="en">
                 <Head>
                     <link rel="stylesheet" href="https://use.typekit.net/vyn1ysl.css" />
+                    <link rel="icon" href="/img/logo.png" />
                 </Head>
                 <body>
                     <Main />
