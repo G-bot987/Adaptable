@@ -11,9 +11,8 @@ interface navbarDataInterface {
 }
 
 export default function Navbar(props: navbarDataInterface) {
-  const { navbar, navSelected, SetNavSelected } = props
-  const { image, alt, text } = props.newBooking
-
+  const { navbar, navSelected, SetNavSelected, newBooking } = props
+  const { image, alt, text } = newBooking || {};
   const [openNavBar, setOpenNavBar] = useState(false)
 
 
@@ -42,17 +41,19 @@ export default function Navbar(props: navbarDataInterface) {
         </li>
       ))}
 
-      {openNavBar && <li className={styles.navbar__imgContainer}>
-        <button>
-          <Image src={image} alt={alt} />
-        </button>
-      </li>}
+      {openNavBar && image && alt &&
+        <li className={styles.navbar__imgContainer}>
+          <button>
+            <Image src={image} alt={alt} />
+          </button>
+        </li>}
 
-      {openNavBar && <li>
-        <button className={styles.navbar__button}>
-          {text}
-        </button>
-      </li>}
+      {openNavBar && text &&
+        <li>
+          <button className={styles.navbar__button}>
+            {text}
+          </button>
+        </li>}
     </ul>
   )
 }
