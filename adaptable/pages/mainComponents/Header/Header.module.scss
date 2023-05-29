@@ -3,7 +3,6 @@
     background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
-    padding-right: 1.875rem;
 
     &__upper {
         background-color: #FFFFFF;
@@ -12,7 +11,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
 
         &__logo {
             width: 5.625rem;
@@ -86,5 +85,11 @@
             border-radius: 100px;
             margin-top: 0.625rem;
         }
+    }
+}
+
+@media(min-width:768px) {
+    .header {
+        padding-right: 1.875rem;
     }
 }

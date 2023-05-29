@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Image from "next/image";
 import Navbar from './navbar/Navbar';
-import NewBooking from './newBooking/NewBooking';
 import { StaticImageData } from "next/image"
 import styles from './Header.module.scss'
 import { newBookingInterface } from '../../../interfaces/headerInterfaces/header.interfaces';
@@ -34,14 +33,14 @@ export default function Header(props: headerDataInterface) {
     const { image, alt } = props.headerData?.logo || {};
 
     const [navSelected, SetNavSelected] = useState('Patients')
+
     return (
         <section className={styles.header}>
             <section className={styles.header__upper}>
                 <div className={styles.header__upper__logo}>
                     <Image src={image} alt={alt} />
                 </div>
-                <Navbar {...{ navbar, navSelected, SetNavSelected }} />
-                <NewBooking {...newBooking} />
+                <Navbar {...{ navbar, navSelected, SetNavSelected, newBooking }} />
             </section>
             <section className={styles.header__lower}>
                 <ul className={styles.header__lower__breadCrumbs}>
@@ -58,13 +57,11 @@ export default function Header(props: headerDataInterface) {
                     }
                 </ul>
 
-
                 <h1 className={styles.header__lower__titleCard}>
                     {title}
                 </h1>
 
                 <button className={styles.header__lower__assessmentBtn}>
-
                     {assessmentBtn?.text}
                 </button>
 
