@@ -5,16 +5,16 @@
     padding-bottom: 6.25rem;
     display: flex;
     flex-direction: column;
+    padding-top: 3.75rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    overflow: scroll;
 
     &__table {
         background-color: #FFFFFF;
         outline: 1px solid #DDD8DE;
-        margin-top: 3.75rem;
-        margin-left: 2.5rem;
-        margin-right: 2.5rem;
         border-radius: 5px;
         border-collapse: collapse;
-        overflow: scroll;
 
         &__colWrapper {
             border-bottom: 1px solid #DDD8DE;
