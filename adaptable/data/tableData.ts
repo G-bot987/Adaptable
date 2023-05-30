@@ -34,7 +34,7 @@ export const tableData = {
                     {
                         key: '2',
                         appointment: 'Document 2',
-                        booked: false,
+                        booked: true,
                         DateTime: 'Document 2 DateTime',
                         location: 'Document 2 Location',
                         Clinician: 'Document 2 Clinician'
@@ -65,7 +65,7 @@ export const tableData = {
                     {
                         key: '1',
                         appointment: 'Billing item 1',
-                        booked: true,
+                        booked: false,
                         DateTime: 'Billing item 1 DateTime',
                         location: 'Billing item 1 Location',
                         Clinician: 'Billing item 1 Clinician'
