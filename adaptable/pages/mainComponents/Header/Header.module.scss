@@ -108,5 +108,9 @@
             border-radius: 100px;
             margin-top: 0.625rem;
         }
+
+        &__assessmentBtn:hover {
+            cursor: pointer;
+        }
     }
 }
