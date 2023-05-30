@@ -35,6 +35,26 @@
         width: 92vw;
     }
 
+    @media(min-width:1024px) {
+        width: 93vw;
+    }
+
+    @media(min-width:1051px) {
+        width: 94vw;
+    }
+
+    @media(min-width:1342px) {
+        width: 95vw;
+    }
+
+    @media(min-width:1611px) {
+        width: 96vw;
+    }
+
+    @media(min-width:2013px) {
+        width: 97vw;
+    }
+
     &__table {
         background-color: #FFFFFF;
         outline: 1px solid #DDD8DE;
