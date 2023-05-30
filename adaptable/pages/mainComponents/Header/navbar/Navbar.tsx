@@ -56,7 +56,7 @@ export default function Navbar(props: navbarDataInterface) {
       </li>
 
 
-      <li className={`${openNavBar ? styles['navbar__container__button--open'] : styles['navbar__container__button--hidden']}`}>
+      <li className={`${openNavBar ? styles['navbar__containerButton--open'] : styles['navbar__containerButton--hidden']}`}>
         <button className={styles.navbar__container__button}>
           {text}
         </button>

@@ -41,7 +41,7 @@
              }
 
              &__bar--openTop {
-                 transition: transform 2s ease;
+                 transition: transform 1.5s ease;
                  transform: rotate(45deg) translate(3px, 5px);
                  margin: 0;
              }
@@ -51,7 +51,7 @@
              }
 
              &__bar--openBtm {
-                 transition: transform 2s ease;
+                 transition: transform 1.5s ease;
                  transform: rotate(-45deg) translate(-2px, -1px);
                  margin: 0;
              }
@@ -97,7 +97,7 @@
          display: none;
          transition: display 0.3s;
      }
-     
+
      &__btnWrapper--selected {
          border-bottom: 2px solid;
          border-color: #7B3CEA;
@@ -138,16 +138,24 @@
 
      &__imgContainer--hidden {
          display: none;
-         transition: display 0.3s;
      }
+
+     &__containerButton--hidden {
+         display: none;
+     }
+
+     &__containerButton--open {
+         display: relative;
+     }
+
  }
 
  .navbar--closed {
      background-color: #FFFFFF;
      transition: height 0.3s ease, background-color 0.3s ease;
-     height: 100px;
+     height: 80px;
      padding-bottom: 0;
-     padding-top: 25px;
+     padding-top: 5px;
  }
 
  .navbar--open {
