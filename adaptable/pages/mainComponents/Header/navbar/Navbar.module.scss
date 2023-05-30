@@ -5,10 +5,10 @@
      flex-direction: column;
      justify-content: space-between;
      background-color: #280B3D;
+     margin-left: 4.5rem;
 
-     @media (max-width: 767px) {
+     @media (max-width: 1023px) {
          padding-top: 580px;
-         padding-bottom: 50px;
          position: relative;
          top: 0;
          right: 0;
@@ -16,6 +16,8 @@
          z-index: 1;
          border-bottom-left-radius: 5px;
          border-bottom-right-radius: 5px;
+         padding: 36.25rem 1rem 3.125rem;
+         max-width: fit-content;
      }
 
      &__openBtnContainer {
@@ -53,7 +55,7 @@
          }
      }
 
-     @media(min-width: 768px) {
+     @media(min-width: 1024px) {
          &__openBtnContainer {
              display: none;
          }
@@ -123,13 +125,13 @@
  }
 
 
- @media(min-width:768px) {
+ @media(min-width:1024px) {
      .navbar {
          flex-direction: row;
          background-color: #FFFFFF;
-         padding-left: 13.58125rem;
          display: flex;
          height: 100%;
+         max-width: fit-content;
 
          &__btnWrapper {
              max-width: 4.75rem;
