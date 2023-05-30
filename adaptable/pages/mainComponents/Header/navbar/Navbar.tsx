@@ -30,7 +30,7 @@ export default function Navbar(props: navbarDataInterface) {
   }, [openNavBar])
 
   return (
-    <ul className={`${openNavBar ? styles[`navbar`] : styles[`navbar--closed`]}`}>
+    <ul className={`${styles.navbar} ${openNavBar ? styles[`navbar--open`] : styles[`navbar--closed`]}`}>
 
       <li className={styles.navbar__openBtnContainer}>
         <button onClick={() => { setOpenNavBar(!openNavBar) }} className={styles.navbar__openBtnContainer__btn}>
@@ -40,27 +40,27 @@ export default function Navbar(props: navbarDataInterface) {
         </button>
       </li>
 
-      {openNavBar && navbar?.map((option: any, index: number) => (
-        <li className={`${styles.navbar__btnWrapper} ${navSelected === option ? styles['navbar__btnWrapper--selected'] : ''}`} key={index}>
+      {navbar?.map((option: any, index: number) => (
+        <li className={`${openNavBar ? styles[`navbar__btnWrapper`] : styles[`navbar__btnWrapper--hidden`]} ${navSelected === option ? styles['navbar__btnWrapper--selected'] : ''}`} key={index}>
           <button onClick={() => { SetNavSelected(`${option}`) }} className={`${styles.navbar__btnWrapper__btn} ${navSelected !== option ? styles['navbar__btnWrapper__btn--notSelected'] : styles['navbar__btnWrapper__btn--selected']}`}>
             {option}
           </button>
         </li>
       ))}
 
-      {openNavBar && image && alt &&
-        <li className={styles.navbar__imgContainer}>
-          <button className={styles.navbar__imgContainer__myAccBtn}>
-            <Image src={image} alt={alt} />
-          </button>
-        </li>}
 
-      {openNavBar && text &&
-        <li>
-          <button className={styles.navbar__button}>
-            {text}
-          </button>
-        </li>}
+      <li className={`${openNavBar ? styles['navbar__imgContainer'] : styles['navbar__imgContainer--hidden']}`}>
+        <button className={styles.navbar__imgContainer__myAccBtn}>
+          <Image src={image} alt={alt} />
+        </button>
+      </li>
+
+
+      <li className={`${openNavBar ? styles['navbar__container__button--open'] : styles['navbar__container__button--hidden']}`}>
+        <button className={styles.navbar__container__button}>
+          {text}
+        </button>
+      </li>
     </ul>
   )
 }
