@@ -14,9 +14,73 @@ export const tableData = {
             }
         },
 
-        { header: 'Documents' },
+        {
+            header: 'Documents', tableContent: {
+                columns: [
+                    { value: 'Appointment type', key: 'appointment' },
+                    { value: 'Date & Time', key: 'DateTime' },
+                    { value: 'Location', key: 'location' },
+                    { value: 'Clinician', key: 'Clinician' }
+                ],
+                appointmentType: [
+                    {
+                        key: '1',
+                        appointment: 'Document 1',
+                        booked: true,
+                        DateTime: 'Document 1 DateTime',
+                        location: 'Document 1 Location',
+                        Clinician: 'Document 1 Clinician'
+                    },
+                    {
+                        key: '2',
+                        appointment: 'Document 2',
+                        booked: false,
+                        DateTime: 'Document 2 DateTime',
+                        location: 'Document 2 Location',
+                        Clinician: 'Document 2 Clinician'
+                    },
+                    {
+                        key: '3',
+                        appointment: 'Document 3',
+                        booked: false,
+                        DateTime: 'Document 3 DateTime',
+                        location: 'Document 3 Location',
+                        Clinician: 'Document 3 Clinician'
+                    }
+                ]
+            }
+        },
 
-        { header: 'Billing' }
+        {
+            header: 'Billing',
 
+            tableContent: {
+                columns: [
+                    { value: 'Appointment type', key: 'appointment' },
+                    { value: 'Date & Time', key: 'DateTime' },
+                    { value: 'Location', key: 'location' },
+                    { value: 'Clinician', key: 'Clinician' }
+                ],
+                appointmentType: [
+                    {
+                        key: '1',
+                        appointment: 'Billing item 1',
+                        booked: true,
+                        DateTime: 'Billing item 1 DateTime',
+                        location: 'Billing item 1 Location',
+                        Clinician: 'Billing item 1 Clinician'
+                    },
+                    {
+                        key: '2',
+                        appointment: 'Billing item 2',
+                        booked: false,
+                        DateTime: 'Billing item 2 DateTime',
+                        location: 'billing item 2 locatoin',
+                        Clinician: 'billing item 2 clinician',
+                    }
+
+                ]
+            }
+        }
     ]
 }
