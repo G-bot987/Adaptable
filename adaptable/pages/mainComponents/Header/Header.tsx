@@ -64,7 +64,6 @@ export default function Header(props: headerDataInterface) {
                 <button className={styles.header__lower__assessmentBtn}>
                     {assessmentBtn?.text}
                 </button>
-
             </section>
         </section>
     )
