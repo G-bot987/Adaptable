@@ -19,8 +19,40 @@
         width: 84vw;
     }
 
+    @media(min-width:540px) {
+        width: 85vw;
+    }
+
+    @media(min-width:581px) {
+        width: 87vw;
+    }
+
+    @media(min-width:701px) {
+        width: 88vw;
+    }
+
     @media(min-width:768px) {
         width: 92vw;
+    }
+
+    @media(min-width:1024px) {
+        width: 93vw;
+    }
+
+    @media(min-width:1051px) {
+        width: 94vw;
+    }
+
+    @media(min-width:1342px) {
+        width: 95vw;
+    }
+
+    @media(min-width:1611px) {
+        width: 96vw;
+    }
+
+    @media(min-width:2013px) {
+        width: 97vw;
     }
 
     &__table {

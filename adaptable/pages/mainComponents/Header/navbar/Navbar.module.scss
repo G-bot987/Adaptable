@@ -5,10 +5,8 @@
      flex-direction: column;
      justify-content: space-between;
      background-color: #280B3D;
-     margin-left: 4.5rem;
 
      @media (max-width: 1023px) {
-         padding-top: 580px;
          position: relative;
          top: 0;
          right: 0;
@@ -18,6 +16,10 @@
          border-bottom-right-radius: 5px;
          padding: 36.25rem 1rem 3.125rem;
          max-width: fit-content;
+     }
+
+     @media (min-width: 1024px) {
+         padding-left: 2.5rem;
      }
 
      &__openBtnContainer {
