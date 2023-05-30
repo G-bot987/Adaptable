@@ -48,11 +48,18 @@
             &__container {
                 display: flex;
                 flex-direction: row;
-                font-weight: 400;
                 margin-right: 0.515625rem;
                 color: #48305A;
-                size: 0.75rem;
+                font-size: 0.75rem;
                 line-height: 1.25rem;
+
+                @media (max-width:342px) {
+                    text-align: center;
+                    justify-items: center;
+                    width: min-content;
+                    justify-content: center;
+                    align-items: center;
+                }
 
                 &__arrowContainer {
                     display: flex;
