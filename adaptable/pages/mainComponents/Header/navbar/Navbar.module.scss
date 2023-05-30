@@ -13,7 +13,6 @@
          height: 600px;
          z-index: 1;
          border-bottom-left-radius: 5px;
-         border-bottom-right-radius: 5px;
          padding: 36.25rem 1rem 3.125rem;
          max-width: fit-content;
      }
@@ -33,15 +32,15 @@
              &__bar {
                  background-color: #280B3D;
                  width: 30px;
-                 height: 4px;
+                 height: 5px;
                  margin-top: 5px;
                  margin-bottom: 5px;
-                 border-radius: 5px;
+                 border-radius: 9999px;
              }
 
              &__bar--openTop {
                  transition: transform 0.3s ease;
-                 transform: rotate(45deg) translate(-3px, 1px);
+                 transform: rotate(45deg) translate(3px, 5px);
                  margin: 0;
              }
 
@@ -51,9 +50,13 @@
 
              &__bar--openBtm {
                  transition: transform 0.3s ease;
-                 transform: rotate(-45deg) translate(4px, -6px);
+                 transform: rotate(-45deg) translate(-2px, -1px);
                  margin: 0;
              }
+         }
+
+         &__btn:hover {
+             cursor: pointer;
          }
      }
 
