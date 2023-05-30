@@ -13,7 +13,7 @@ interface navbarDataInterface {
 export default function Navbar(props: navbarDataInterface) {
   const { navbar, navSelected, SetNavSelected, newBooking } = props
   const { image, alt, text } = newBooking || {};
-  const [openNavBar, setOpenNavBar] = useState(false)
+  const [openNavBar, setOpenNavBar] = useState(true)
 
 
   useEffect(() => {

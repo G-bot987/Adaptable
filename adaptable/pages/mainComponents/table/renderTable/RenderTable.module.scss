@@ -1,20 +1,33 @@
 .backDrop {
     background-color: #F9F8F6;
-    width: 100%;
     height: 100%;
     padding-bottom: 6.25rem;
     display: flex;
     flex-direction: column;
+    padding-top: 1.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow: scroll;
+
+    @media(min-width:360px) {
+        padding-top: 3.75rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    @media(min-width:520px) {
+        width: 84vw;
+    }
+
+    @media(min-width:768px) {
+        width: 92vw;
+    }
 
     &__table {
         background-color: #FFFFFF;
         outline: 1px solid #DDD8DE;
-        margin-top: 3.75rem;
-        margin-left: 2.5rem;
-        margin-right: 2.5rem;
         border-radius: 5px;
         border-collapse: collapse;
-        overflow: scroll;
 
         &__colWrapper {
             border-bottom: 1px solid #DDD8DE;
