@@ -16,6 +16,13 @@ export default function Navbar(props: navbarDataInterface) {
   const [openNavBar, setOpenNavBar] = useState(true)
 
 
+
+  useEffect(() => {
+    if ((window.innerWidth <= 1023)) {
+      setOpenNavBar(false)
+    }
+  }, [])
+
   useEffect(() => {
   }, [navSelected])
 
@@ -43,7 +50,7 @@ export default function Navbar(props: navbarDataInterface) {
 
       {openNavBar && image && alt &&
         <li className={styles.navbar__imgContainer}>
-          <button>
+          <button className={styles.navbar__imgContainer__myAccBtn}>
             <Image src={image} alt={alt} />
           </button>
         </li>}
