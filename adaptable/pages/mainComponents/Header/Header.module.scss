@@ -61,6 +61,10 @@
                     align-items: center;
                 }
 
+                &__btn:hover {
+                    cursor: pointer
+                }
+
                 &__arrowContainer {
                     display: flex;
                     flex-direction: column;

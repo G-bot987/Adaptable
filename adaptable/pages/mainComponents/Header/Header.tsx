@@ -46,7 +46,7 @@ export default function Header(props: headerDataInterface) {
                 <ul className={styles.header__lower__breadCrumbs}>
                     {breadCrumbs?.map((crumb: string, index: number) => (
                         <li key={index} className={`${styles.header__lower__breadCrumbs__container} ${index + 1 === breadCrumbs.length ? styles['header__lower__breadCrumbs__container--last'] : ''}`}>
-                            <button>
+                            <button className={styles.header__lower__breadCrumbs__container__btn}>
                                 {crumb}
                             </button>
                             {index < breadCrumbs.length - 1 && (

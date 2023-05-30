@@ -131,6 +131,10 @@
             text-decoration: underline;
         }
 
+        &__row--bookNow:hover {
+            cursor: pointer
+        }
+
         &__row--booked {
             padding-left: 1rem;
             padding-top: 1.125rem;
@@ -147,6 +151,10 @@
             padding-top: 1.125rem;
             padding-bottom: 1.125rem;
             text-decoration: underline;
+        }
+
+        &__rowBtm--bookNow:hover {
+            cursor: pointer
         }
     }
 }

@@ -79,6 +79,7 @@
 
          &__btn--notSelected:hover {
              color: #7B3CEA;
+             cursor: pointer
          }
 
          &__btn--selected {
@@ -106,10 +107,15 @@
      &__button:hover {
          color: #FFFFFF;
          background-color: #7B3CEA;
+         cursor: pointer
      }
 
      &__imgContainer {
          background-color: #FFFFFF;
+
+         &__myAccBtn:hover {
+             cursor: pointer
+         }
 
          @media (max-width: 767px) {
              border-radius: 2px;
